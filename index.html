@@ -873,16 +873,46 @@ gtag("set","linker",{"domains":["odontologiahetzl.com.br"]});gtag("js",new Date(
     /* Styles unified with .btn-primary */
   }
 
-  /* Hide navigation buttons on mobile */
+  /* Custom Minimalist Navigation Buttons */
   .swiper-button-next, .swiper-button-prev {
-    color: var(--gold);
+    width: 48px !important;
+    height: 48px !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 50% !important;
+    background: transparent !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: transparent !important;
+  }
+  .swiper-button-next:hover, .swiper-button-prev:hover {
+    border-color: rgba(255, 255, 255, 0.6) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+  }
+  .swiper-button-next::after, .swiper-button-prev::after {
+    display: none !important;
+  }
+  .swiper-button-next::before, .swiper-button-prev::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-top: 1.5px solid #fff;
+    border-right: 1.5px solid #fff;
+    display: inline-block;
+  }
+  .swiper-button-next::before {
+    transform: rotate(45deg);
+    margin-right: 3px; 
+  }
+  .swiper-button-prev::before {
+    transform: rotate(-135deg);
+    margin-left: 3px;
   }
   @media (max-width: 768px) {
     .swiper-button-next, .swiper-button-prev {
-      /* Em vez de esconder na versão mobile, apenas reduzimos o tamanho */
-      display: flex;
-      transform: scale(0.6);
-      /* Afastar um pouco para as bordas se necessário */
+      display: flex !important;
+      transform: scale(0.85);
     }
     .gallery-header {
       align-items: flex-start !important;
